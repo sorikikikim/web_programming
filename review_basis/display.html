@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Display : Block, Inline</title>
+		<meta charset="utf-8">
+		<style>
+			span{
+				display: block;
+				width : 100px;
+				height: 60px;
+				background-color: salmon;
+			}
+			div > div{ /*div는 default로 block type*/
+				display: inline-block; /*inline type으로 설정*/
+				width: 50px;
+				height: 70px;
+				background: palegoldenrod;
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>DISPLAY - Block, Inline</h3>
+		<hr>
+		This is <span>block span </span> and <span>BLOCK SPAN</span>.
+		<hr>
+		<div style="background: orange;">
+			<div>inline Div</div>
+			<div>inline Div</div>
+			<div>inline Div</div>
+		</div>
+		<div>KOREA</div>
+	</body>
+</html>

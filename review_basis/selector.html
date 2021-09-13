@@ -4,14 +4,32 @@
 		<title>셀렉터 만들기</title>
 		<meta charset="utf-8">
 		<style>
+			*{ /*전체 셀렉터*/
+				color: yellow;
+			}
 			h3, li{
 				color: palevioletred;
 			}
 			.warning{
 				color: red;
 			}
-			body.main{
+			body.main{ /*여러태그를 하나의 그룹으로 묶기 위한 class 셀렉터*/
 				background: aliceblue;
+			}
+			#list{ /*각 태그를 구분하기 위한 id 셀렉터*/
+				background: mistyrose;
+			}
+			div > strong {/*자식 셀렉터*/
+				color: blue;
+			}
+			ul strong{ /*자손 셀렉터*/
+				color: green;
+			}
+			input[type='text']{ /*속성 셀렉터*/
+				color: red;
+			}
+			li:hover{ /*가상 셀렉터*/
+				background-color: aquamarine;
 			}
 		</style>
 	</head>
@@ -19,13 +37,14 @@
 		<h3>Web Programming</h3>
 		<hr>
 		<div>
-			<div>2학기 <strong class="warning">학습내용</strong></div>
-			<ul>
+			<div>2학기 <strong >학습내용</strong></div>
+			<ul id="list">
 				<li>HTML5</li>
 				<li><strong>CSS</strong></li>
 				<li>JAVASCRIPT</li>
 			</ul>
 			<div class='warning'>60점 이하는 F!</div>
 		</div>
+		Name : <input type='text'>
 	</body>
 </html>

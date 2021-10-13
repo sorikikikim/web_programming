@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>시맨틱 태그</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h2>시맨틱 블록 태그</h2>
+		<h5>블록을 구성하는 html5 시맨틱 태그</h5>
+		<hr>
+		<h3>&lt;figure&gt; 태그 활용</h3>
+		<p>&lt;figure&gt;은 본문에 삽입된 그림을 블록화하는 시맨틱 태그이다. &lt;figure&gt; 태그를 이용하면 이미지, 동영상, 소스 코드 등 콘텐츠를 블록화 할 수 있다.
+			그림 제목은 &lt;figure&gt; 태그 내에 &lt;figcation&gt; 태그로 작성한다. </p>
+		<figure id="1-1">
+			<figcaption>alert() 함수 활용</figcaption>
+			<pre>
+				<code>function f() { alert("경고합니다"); }</code>
+			</pre>
+			<hr>
+			<small>실행결과</small>
+			<pre>
+				<img src="alert.png" alt="실행결과">
+			</pre>
+		</figure>
+		<h3>&lt;details&gt;와 &lt;summary&gt; 태그 활용</h3>
+		Q &amp; A 리스트 <br><br>
+		<details>
+			<summary>Question 1</summary>
+			<p>웹 개발자가 알아야 하는 언어 3가지?</p>
+		</details>
+		<br>
+		<details>
+			<summary>Answer 1</summary>
+			<p>HTML5, CSS, Javascript</p>
+		</details>
+		<br><br><br><br>
+		<h2>시맨틱 인라인 태그</h2>
+		<h5>텍스트의 일부를 마크업하는 html5 시맨틱 태그</h5>
+		<hr>
+		<p>&lt;mark&gt; - 중요한 텍스트임을 표시<br>
+			&lt;time&gt; - 시간 정보임을 표시<br>
+			&lt;meter&gt; - 주어진 범위나 %의 데이터 양 표시<br>
+			&lt;progress&gt; - 작업의 진행 정도 표시<br></p>
+		<p>
+			내일 <mark>HTML5 시험</mark><br>
+			시간은 <time>09:00</time><br>
+			난이도 <meter value="0.8" max="1.0">80%</meter><br>
+			자료 업로딩(20%) <progress value="2" max="10"></progress><br>
+		</p>
+	</body>
+</html>

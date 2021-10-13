@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>웹 폼</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h3>로그인 폼 만들기</h3>
+		<hr>
+		<form name="login" method="get">
+			사용자 ID : <input type="text" size="15" value=""><br>
+			password : <input type="password" size="16" value="">
+			<input type="submit" value="완료">
+		</form>
+
+		<h3>폼 태그</h3>
+		<hr>
+		<p>
+			<b>name</b> 속성 - 폼의 이름을 지정하는 속성으로 자바스크립트에서 사용함 <br><br>
+			<b>action</b> 속성 - 폼 데이터를 처리할 웹 서버 응용프로그램을 지정한다. <br>
+			submit 버튼이 클릭되면 브라우저는 action 속성에 지정된 웹 서버에 연결하고<br>
+			웹 서버 응용프로그램을 실행할 것을 지시한다. 이때 사용자가 입력한 폼 데이터를 함께 전송한다. <br><br>
+			<b>method</b> 속성 - 폼 데이터를 웹 서버로 전송하는 형식을 지시한다.<br>
+			대표적인 방식이 GET과 POST이다. 이는 이 책의 범위를 넘어서므로 따로 공부해야 한다.<br>
+		</p>
+		<!--<form action="웹 서버 응용 프로그램의 URL", 폼 데이터를 처리할 웹 서버 응용프로그램 이름 URL
+				  enctype="데이터의 인코딩 타입", 폼 데이터를 웹 서버로 전송할 때 암호화 방식 지정
+				  method="GET|POST", 폼 데이터를 웹 서버에 전송하는 방식
+				  name="폼 이름"
+				  target="윈도우 이름", 웹 서버 응용 프로그램으로부터 전송받은 데이터를 출력할 윈도우 이름
+		-->
+
+		<h3>텍스트 입력</h3>
+		<form>
+			이름 : <input type="text" name="text" value="" ><br><!--size: 입력 창의 크기, 단위는 문자 개수/ maxlength: 입력할 수 있는 문자의 최대 개수-->
+			암호 : <input type="password"  maxlength="4" value=""><br>
+			자기소개 : <textarea cols="20" row="5" name="intro"><br>화면에 출력할 초기 텍스트, 없으면 빈 공간만 출력된다.</textarea><!--wrap: OFF|HARD|SOFT 자동 줄바꿈 처리 지정-->
+		</form>
+
+		<h3>데이터 목록을 가진 텍스트 입력</h3>
+		<form>
+			나라 : <input type="text" list="countries"><br>
+			<datalist id="countries">
+			<option value="가나"></option>
+			<option value="스위스"></option>
+			<option value="브라질"></option>
+			</datalist>
+		</form>
+		
+
+		<h3>텍스트/이미지 버튼 만들기</h3>
+		<p>
+			<b>단순 버튼</b><br>
+			아무 기능이 없는 버튼으로 자바스크립트 코드에서 이용된다.<br><br>
+			<b>submit 버튼</b><br>
+			클릭하면 브라우저가 폼 데이터를 웹 서버로 전송한다.<br><br>
+			<b>reset 버튼</b><br>
+			폼에 입력된 내용을 모두 지우고 초기화하는 버튼<br><br>
+			<b>image 버튼</b><br>
+			아무 기능이 없는 버튼으로 자바스크립트 코드에서 이용된다.<br><br>
+		</p>
+		<form>
+			search 버튼: <input type="text" size="10" value=""> 
+			<input type="button" value="search1">
+			<button type="button">search2</button><br>
+			
+			submit 버튼: <input type="submit" value="전송1">
+			<button type="submit">전송2</button><br>
+
+			reset 버튼: <input type="reset" value="리셋1">
+			<button type="reset">리셋2</button><br>
+
+			image 버튼: <input type="image" src="button.png" alt="이미지버튼">
+			<button type="button"><img src="button.png" alt="이미지버튼"></button><br>
+		</form>
+
+		<h3>선택형 입력</h3>
+		<form>
+			<b>checkbox</b> <br> 
+			<label><input type="checkbox" value="1" checked> 짜장면 </label>
+			<label><input type="checkbox" value="2"> 짬뽕 </label>
+			<label><input type="checkbox" value="3"> 탕수육 <br><br></label>
+			<b>radio button</b> <br> 
+			<input type="radio" name="china" value="1" checked> 짜장면 <!--같은 name을 가진 라디오 버튼 중 하나만 선택 가능-->
+			<input type="radio" name="china" value="2"> 짬뽕
+			<input type="radio" name="china" value="3"> 탕수육 <br><br>
+			<b>combo box</b> <br> 
+			<select name="china">
+				<option value="1" selected>짜장면</option>
+				<option value="2">짬뽕</option>
+				<option value="3">탕수육</option>
+			</select>
+		</form>
+
+		<h3>형식을 가진 텍스트 입력, 힌트 정보 주기</h3>
+		<form>
+			<fieldset> <!--그룹박스-->
+				email 주소 <input type="email" placeholder="id@host"> <!--email형식으로 입력하지 않으면 오류, @형식으로 힌트-->
+				<br>
+				url 주소 <input type="url" placeholder="http://">
+				<br>
+				전화번호 <input type="tel" placeholder="010-1234-5678">
+				<input type="submit" value="확인">
+				<br>
+			</fieldset>
+			<hr>
+			<fieldset>
+				검색어 <input type="search" placeholder="검색어">
+				<input type="button" value="검색">
+			</fieldset>
+		</form>
+
+		
+
+	</body>
+</html>

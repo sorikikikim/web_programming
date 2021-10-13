@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>고급 문서 만들기</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h3>이미지 삽입</h3>
+		<hr>
+		<p>강아지의 사진</p>
+		<!--
+			img src="이미지 파일의 URL", 필수 속성
+			alt="문자열" , 이미지가 없거나 손상되는 등 출력할 수 없는 경우 출력되는 문자열, 필수 속성
+			width="이미지 폭" , 생략되면 원본 이미지의 폭
+			height="이미지 높이" , 생략되면 원본 이미지의 너비
+		-->
+		<img src="puppy.jpg"
+			height="100"
+			width="100"
+			alt="강아지 사진이 없음">
+		<hr>
+		<h3>리스트 만들기</h3>
+		<hr>
+		순서 있는 리스트(ordered list) - &lt;ol&gt; <br>
+		<ol type="1">
+			<li>일어나기</li>
+			<li>씻기</li>
+			<li>옷 입기</li>
+			<li>등교하기</li>
+		</ol>
+		<hr>
+		순서 없는 리스트(unordered list) - &lt;ul&gt; <br>
+		<ul>
+			<li>감자탕</li>
+			<li>파스타</li>
+			<li>해물찜</li>
+		</ul>
+		<hr>
+		정의 리스트(definition list) - &lt;dl&gt; <br>
+		<ul>
+			<li>웹 브라우저 종류</li>
+			<dl>
+				<dt><strong>Internet Explorer</strong></dt>
+				<dd>마이크로소프트에서 만든 브라우저로 현재 국내 시장에서 가장 많이 사용</dd>
+				<dt><strong>Firefox</strong></dt>
+				<dd>Mozilla 재단에서 오픈 소스로 만든 것으로 W3C의 웹 표준을 선도</dd>
+				<dt><strong>Chrome</strong></dt>
+				<dd>구글에서 만든 것으로 좋은 디버거를 갖추고 있어 디버깅에 많이 사용</dd>
+			</dl>
+			<li>중국 음식 종류</li>
+			<dl>
+				<dt><strong>짜장면</strong></dt>
+				<dd>춘장으로 만든 가장 인기 있는 중식</dd>
+				<dt><strong>짬뽕</strong></dt>
+				<dd>매콤하고 시원한 맛의 중식</dd>
+				<dt><strong>마라탕</strong></dt>
+				<dd>요즘 뜨고 있는 중식</dd>
+			</dl>
+		</ul>
+		<hr>
+		<h3>표 만들기</h3>
+		<!--표 전체 구성
+		<table>
+			<caption>표 제목</caption>
+			표의 의미(시맨틱)를 파악하기 위해 아래의 코드로 표를 구조화해야 한다.
+			<th> : 헤딩(제목) 정보를 가진 셀
+			<hr> : 행 단위로 표현 
+			<td> : 데이터 정보를 가진 셀
+			<thead> .. </thead>
+			<tfoot> .. </tfoot>
+			<tbody> .. </tbody>
+		</table>
+		-->
+		<table border="1">
+			<caption>1학기 성적</caption>
+			<thead><tr><th>이름</th><th>HTML</th><th>CSS</th></tr></thead>
+			<tfoot><tr><th>합</th><th>225</th><th>230</th></tr></tfoot>
+			<tbody>
+				<tr><td>황기태</td><td>80</td><td>70</td></tr>
+				<tr><td>이재문</td><td>50</td><td>45</td></tr>
+				<tr><td>이병은</td><td>90</td><td>58</td></tr>
+			</tbody>	
+		</table>
+	</body>
+</html>

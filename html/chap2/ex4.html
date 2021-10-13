@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>하이퍼링크</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--
+			<a href="URL"|"URL#앵커이름"|"#앵커이름" : 이동할 html 페이지의 url 혹은 html 페이지 내 앵커 이름
+			target="윈도우이름" : 링크에 연결된 html 페이지가 출력될 윈도우 이름 지정
+			download> : 링크가 클릭되면 href에 지정된 파일이 다운로드 됨
+		-->
+		<h3>하이퍼링크 만들기</h3>
+		<hr>
+		포털 사이트
+		<ul>
+			<li><a href="https://www.naver.com" target="_blank">네이버</a></li> <!--새 윈도우-->
+			<li><a href="https://www.daum.net" target="_self">다음</a></li> <!--현재 윈도우-->
+		</ul>
+		신문 사이트
+		<ul>
+			<li>
+				<a href="http://www.etnews.com" target="_parent"> <!--부모 윈도우--> <img src="media/etnews.png" alt="전자신문"></a> 
+			</li>
+			<li>
+				<a href="http://www.chsun.com" target="_top"> <!--브라우저 윈도우--> <img src="media/chosun.png" alt="조선일보"></a>
+			</li>
+		</ul>
+		<hr>
+		<a href="ex3.html">ex3으로 이동</a>
+		<br>
+		<h3>앵커 만들기</h3>
+		<p>문서 내 특정 위치(앵커)로 이동하는 링크를 만들 예정이다. 예를 들면 사용자가 목차에서 항목을 클릭하면 해당하는 본문의 위치로 이동하는 경우가 있다.</p>
+		<!--앵커 만들기
+			<p id="chap1">1장 서론</p>
+			...
+			<h3 id="chap2">2장 본론</h3>
+
+			앵커에 연결하는 링크 만들기
+			<a href="#chap1">서론으로 가기</a>
+			<a href="#chap2">본론으로 가기</a>
+		-->
+		<h4>Elvis Presley</h4>
+		<ul>
+			<li><a href="#love">Love me tender</a></li>
+			<li><a href="#long">Love me tender, Love me long</a></li>
+			<li><a href="#dear">Love me tender, Love me dear</a></li>
+		</ul>
+		<h4><a id="love" href="#love">Love me tender</a></h4>
+		Love me tender, Love me sweet, Never let me go <br>
+		You have made my life complete <br>
+		And I love you so <br>
+		Love me tender, Love me true <br>
+		All my dreams fulfilled <br>
+		For my darlin I love you<br>
+		And I always will<br>
+		<h4><a id="long" href="#long">Love me tender, Love me long</a></h4>
+		Take me to your heart <br>
+		For it's there that I belong<br>
+		And well never part<br>
+		Love me tender, Love me true<br>
+		All my dreams fulfilled<br>
+		For my darlin I love you<br>
+		And I always will<br>
+		<h4><a id="dear" href="#dear">Love me tender, Love me dear</a></h4>
+		Tell me you are mine<br>
+		Ill be yours through all the years<br>
+		Till the end of time<br>
+		Love me tender, Love me true<br>
+		All my dreams fulfilled<br>
+		For my darlin I love you<br>
+		And I always will<br>
+
+		<h3>파일 다운로드 링크 만들기</h3>
+		<hr>
+		<ul>
+			<li><a href="a.png" download>a download</a></li>
+			<li><a href="b.png" download>b download</a></li>
+			<li><a href="c.png" download>c download</a></li>
+			<li><a href="d.png" download>d download</a></li>
+		</ul>
+	</body>
+</html>

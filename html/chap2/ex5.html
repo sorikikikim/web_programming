@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>인라인프레임 iframe</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h3>iframe 만들기</h3>
+		<p>
+			&lt;iframe&gt; 태그를 이용하면 현재 html 페이지 내에 내장 윈도우를 만들고 다른 html 페이지를 출력할 수 있다.
+			&lt;iframe&gt; 태그에 의해 만들어지는 윈도우를 인라인 프레임이라고 한다.
+		</p>
+		<!--<iframe src="URL", 출력할 웹페이지의 주소
+					srcdoc="html 문서 텍스트", 출력될 내용
+					name="윈도우 이름", 다른 웹 페이지에서 target 속성 값으로 사용
+					width="프레임의 폭"
+					height="프레임의 높이"
+			iframe 사용시 주의사항
+			1. <body> 태그 내에서만 사용 가능
+			2. src 속성이 생량되면 인라인프레임 영역이 만들어지기는 하지만 빈 상태로 존재한다.
+			3. 인라인프레임이 출력할 html 텍스트를 srcdoc 속성이 있으면 src 속성은 무시된다.
+			4. 인라인프레임 안에 또 다른 인라인프레임을 중첩하여 만들 수 있다.
+		-->
+		<hr>
+		<iframe src="https://www.naver.com/" 
+				width="400" 
+				height="400"
+				srcdoc="<html><head></head><body>naver는 iframe으로의 출력을 거부합니다.</body></html>">
+		</iframe> <!--iframe으로 로드되지 않는 사이트가 있다-->
+		<iframe src="ex2.html"
+				width="400" 
+				height="400">
+		</iframe>
+
+		<h3>브라우저 윈도우와 인라인 프레임 윈도우의 계층 관계</h3>
+		<hr>
+		<iframe src="ex1.html" 
+				name="left"
+				width="100"
+				height="500">
+		</iframe>
+		<iframe src="ex5-1.html" 
+				name="right"
+				width="400"
+				height="500">
+		</iframe>
+
+		<h3>target 속성 활용</h3>
+		<hr>
+		<iframe src="ex5-2.html" 
+				name="left"
+				width="200"
+				height="300">
+		</iframe>
+		<iframe src="http://www.w3c.org" 
+				name="right"
+				width="300"
+				height="300">
+		</iframe>
+
+
+
+	</body>
+</html>

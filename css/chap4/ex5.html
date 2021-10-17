@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>셀렉터 만들기</title>
+		<meta charset="utf-8">
+		<style>
+			h3, li {color: brown;} /*태그 이름 셀렉터*/
+			.warning {color: red;} /*class 셀렉터*/
+			body.main{background-color: aliceblue;}	/*태그 이름(body)와 함께 만들어진 경우 해당 태그(<body>)에서 제한된다.*/
+			#list {background-color: mistyrose;} /*id 셀렉터*/ /*id 셀렉커 이름 앞에 태그 이름을 사용하여 특정 태그에만 적용되도록 제한할 수 있다.*/
+		</style>
+	</head>
+	<body class="main">
+		<h3>Web Programming</h3>
+		<hr>
+		<div>
+			<div>2학기 <strong>학습 내용</strong></div>
+			<ul id="list">
+				<li>HTML5</li>
+				<li>CSS</li>
+				<li>Javascript</li>
+			</ul>
+			<div class="warning">60점 이하는 F!</div>
+		</div>
+	</body>
+</html>

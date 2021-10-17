@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>블록 박스와 인라인 박스</title>
+		<meta charset="utf-8">
+		<style>
+			div {
+				border-color: greenyellow;
+				border-width: 3px;
+				border-style: solid;
+				background-color:rgb(195, 237, 245);
+				color: blue;
+			}
+			div > span {
+				border-color: greenyellow;
+				border-width: 3px;
+				border-style: solid;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>블록 박스와 인라인 박스</h3>
+		<hr>
+		<b>블록태그 사례</b> - p, hl, div, ul <br>
+		<b>인라인태그 사례</b> - span, a, img <br><br>
+
+		블록 박스는 새 라인에서 시작, 옆에 다른 태그를 배치할 수 없음<br>
+		인라인 박스는 블록 안에 배치, 옆에 다른 태그 배치 가능<br><br>
+		<div>DIV</div>
+		<div>DIV</div>
+		<div>DIV</div>
+		<div>DIV 내 <span>span</span>과 <span>span</span>입니다.</div>
+		<div>DIV 내 <span>span</span>과 <span>span</span>입니다.</div>
+		<div>DIV 내 <span>span</span>과 <span>span</span>입니다.</div>
+	</body>
+</html>

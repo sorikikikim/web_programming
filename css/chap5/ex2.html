@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>박스의 유형 제어 display</title>
+		<meta charset="utf-8">
+		<style>
+			span {
+				display: block;
+				width: 100px;
+				height: 60px;
+				background-color: pink;
+			}
+			div > div {
+				display: inline;
+			}
+			#inline-block{
+				display: inline-block;
+				border: 2px dotted orangered;
+				background-color: powderblue;
+				margin: 10px;
+				width: 160px; height: 180px;
+			}
+		</style>
+	</head>
+	<body>
+		<b>블록 박스</b> <br>
+		항상 새 라인에서 시작, 블록 박스 내에만 배치, 옆에 다른 요소 배치 불가능, width와 height으로 크기 조절, padding과 border와 margin 조절 가능<br>
+		<b>인라인 박스</b>
+		새 라인에서 시작 못함, 모든 박스 내 배치 가능, 옆에 다른 요소 배치 가능, width와 height으로 크기 조절 불가능, padding과 border와 margin 조절 불가능<br>
+		<b>인라인 블록 박스</b>
+		<!--inline 속성-->새 라인에서 시작 못함 라인 안에 있음, 모든 박스 내 배치 가능, 옆에 다른 요소 배치 가능, <!--block 속성--> width와 height으로 크기 조절, padding과 border와 margin 조절 가능
+		
+		<h3>display : block</h3>
+		<hr>
+		<div>
+			<span>block span</span>과
+			<span>block span</span>입니다.
+		</div>
+		<br>
+		<br>
+		<h3>display : inline</h3>
+		<hr>
+		<div style="background : orange">
+			<div>inline DIV</div>
+			<div>inline DIV</div>
+			<div>inline DIV</div>
+		</div>
+		<br>
+		<br>
+		<h3>display : inline-block</h3>
+		<hr>
+		<div style="background : orange">
+			<div id="inline-block">inline-block DIV</div>
+			<div id="inline-block">inline-block DIV</div>
+			<div id="inline-block">inline-block DIV</div>
+		</div>
+	</body>
+</html>

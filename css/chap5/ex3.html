@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>박스의 배치 position</title>
+		<meta charset="utf-8">
+		<style>
+			div {
+				display: inline-block;
+				height: 50px;
+				width: 50px;
+				border: 1px solid lightgray;
+				text-align: center;
+				color: white;
+				background-color: red;
+			}
+
+			#down:hover{
+				position: relative;
+				left: 20px;
+				right: 20px;
+				background-color: green;
+			}
+
+			#up:hover{
+				position: relative;
+				right: 20px;
+				bottom: 20px;
+				background-color: green;
+			}
+			#fixed{
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				width: 100;
+				padding: 5px;
+				background-color: pink;
+				color: wheat;
+			}
+			#float{
+				float: left;
+				width: 8em; /*8글자 크기*/
+				padding: 0.5em;
+				margin: 1em;
+			}
+		</style>
+	</head>
+	<body>
+		<b>정적배치</b> <br>
+		position : static<br>
+		<b>상대배치</b> <br>
+		position : relative<br>
+		<b>절대배치</b> <br>
+		position : absolute<br>
+		<b>고정배치</b> <br>
+		position : fixed<br>
+		<b>유동배치</b> <br>
+		float : left, float : right<br>
+
+		<h3>상대 배치, relative</h3>
+		<hr>
+		<div>T</div>
+		<div id="down">h</div>
+		<div>a</div>
+		<div>n</div>
+		<div id="up">k</div>
+		<div>s</div>
+
+		<h3>고정 배치, fixed</h3>
+		<div id="fixed">크리스마스 입니다.</div>
+		<h3>유동 배치, float</h3>
+		<div id="float:left">크리스마스 아닙니다.</div>
+	</body>
+</html>

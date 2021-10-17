@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>prompt() 사용</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h3>prompt()</h3>
+		<hr>
+		<script>
+			var val1 = prompt("값 1을 입력하세요", "");
+			var val2 = prompt("값 2를 입력하세요", "");
+			/*if (val1 == null) 취소, 다이얼로그 닫은 경우*/
+			/*if (val1 == "") 문자열 입력 없이 확인 버튼 누른 경우*/
+			document.write("<h3>Welcome</h3>");
+			document.write(val1 + "+" + val2 + "는 <br>");
+			var sum = parseInt(val1) + parseInt(val2);
+			document.write("<mark>" + sum + "입니다.</mark>");
+			
+		</script>
+	</body>
+</html>

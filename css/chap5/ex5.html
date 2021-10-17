@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>리스트 꾸미기</title>
+		<meta charset="utf-8">
+		<style>
+		#menu {
+			background-color: olive;
+		}
+		#menu ul {
+			margin: 0;
+			padding: 0;
+			width: 600px;
+		}
+		#menu ul li {
+			display: inline-block;
+			list-style-type: none;
+			padding: 0px 15px;
+		}
+		#menu ul li a {
+			color: white;
+			text-decoration: none; /*링크 보이지 않게*/
+		}
+		#menu ul li a:hover {
+			color : violet;
+		}
+		</style>
+	</head>
+	<body>
+		<h3>리스트로 메뉴 만들기</h3>
+		<nav id="menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Espresso</a></li>
+				<li><a href="#">Cappuccino</a></li>
+				<li><a href="#">Cafe latte</a></li>
+				<li><a href="#">F.A.Q</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

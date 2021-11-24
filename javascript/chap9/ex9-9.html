@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>onclick</title>
+		<meta charset="utf-8">
+		<script>
+		function calculate() {
+			var exp = document.getElementById("exp");
+			var res = eval(exp.value);
+			var result = document.getElementById("result");
+			result.value = res;
+		}
+		</script>
+	</head>
+	<body>
+		<h3>onclick, 계산기 만들기</h3>
+		<hr>
+		계산하고자 하는 수식을 입력하고 계산 버튼을 눌러봐요.
+		<br><br>
+		<form>
+			<label for="">
+				식 <input type="text" id="exp" value="" > </label><br>
+			<label for="">
+				값 <input type="text" id="result"> &nbsp;&nbsp;</label>
+				<input type="button" value="계산" onclick="calculate()">
+			</label>
+		</form>
+	</body>
+</html>

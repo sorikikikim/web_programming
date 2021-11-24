@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>김소리 - 2</title>
+		<meta charset="utf-8">
+		<script>
+		function calculate() {
+			var exp = document.getElementById("exp");
+			var res = exp.split(" ");
+			var sum = 0;
+			for (i = 0; i < res.length; i++){
+				sum += parseInt(res[i]);
+			}
+			var result = document.getElementById("result");
+			result.value = sum;
+		}
+		</script>
+	</head>
+	<body>
+		<form>
+			<label for="">
+				숫자 입력 : <input type="text" id="exp" value="" > </label><br>
+			<label for="">
+				결과 : <input type="text" id="result"> &nbsp;&nbsp;</label><br>
+				<input type="button" value="계산하기" onclick="calculate()">
+			</label>
+		</form>
+	</body>
+</html>

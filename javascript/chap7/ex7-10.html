@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>make obj</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			function Box(color, size, amount) {
+				this.color = color;
+				this.size = size;
+				this.amount = amount;
+				
+				this.fill = function() {this.amount += 2;}
+				this.consume = function() {this.amount -= 2;}
+			}
+			document.write('<h3> 프로토타입을 이용한 Box 생성 </h3>');
+			document.write('<hr>');
+			var box = new Box("red", 10, 0);
+			document.write("<p>Box의 color = ", box.color, "</p>");
+			document.write("<p>Box의 size = ", box.size, "</p>");
+			document.write("<p>Box의 amount = ", box.amount, "</p>");
+			box.fill();
+			document.write("<p>Box의 amount = ", box.amount, "</p>");
+		</script>
+	</body>
+</html>

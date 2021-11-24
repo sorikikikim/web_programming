@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>김소리 - 3</title>
+		<meta charset="utf-8">
+		<script>
+			function Student(name, student_id, track_name, mid_score, final_score) {
+				this.name =name;
+				this.student_id = student_id;
+				this.track_name = track_name;
+				this.mid_score = mid_score;
+				this.final_score = final_score;
+				
+				this.average = function() {return (this.mid_score + this.final_score) / 2 }
+			}
+		</script>
+		<script>
+			var student2 = {
+				name2 : "김소리",
+				student_id2 : 1891021,
+				track_name2 : "빅데이터 트랙",
+				mid_score2 : 95,
+				final_score2 : 88,
+
+				average : function() {return (this.mid_score2 + this.final_score2) / 2 }
+			}
+		</script>
+	</head>
+	<body>
+		<h3>프로토타입으로 객체 student 만들기</h3>
+		<script>
+			<script>
+			var student = new Student("김소리", "1891021", "빅데이터트랙", 78, 98);
+
+			document.write("name : " + name);
+			document.write("student_id : " + student_id);
+			document.write("track_name : " + track_name);
+			document.write("mid_score : " + mid_score);
+			document.write("final_score : " + final_score);
+		</script>
+		</script>
+
+		<h3>리터럴 표기법으로 객체 student 만들기</h3>
+		<script>
+			document.write("name : " + name2);
+			document.write("student_id : " + student_id2);
+			document.write("track_name : " + track_name2);
+			document.write("mid_score : " + mid_score2);
+			document.write("final_score : " + final_score2);
+		</script>
+	</body>
+</html>

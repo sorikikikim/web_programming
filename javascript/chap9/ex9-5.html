@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>이벤트 리스너에서 이벤트 객체 전달받기</title>
+		<meta charset="utf-8">
+		<script>
+			function f(e) {
+				alert(e.type);
+			}
+		</script>
+	</head>
+	<body>
+		<p onmouseover="f(event);">마우스를 올려보세요</p>
+		<button onclick="f(event);">클릭하세요</button>
+	</body>
+</html>

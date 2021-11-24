@@ -1,0 +1,22 @@
+<!--자바 스크립트 코드의 위치 : 2. <script> 내에 작성-->
+
+	<!DOCTYPE html>
+<html>
+	<head>
+		<title>script 태그에 자바스크립트 작성</title>
+		<meta charset="utf-8">
+		<script>
+			function over(obj) {
+				obj.src="samsung.png";
+			}
+			function out(obj) {
+				obj.src="apple.png";
+			}
+		</script>
+	</head>
+	<body>
+		<h3>마우스 올려보세요</h3>
+		<hr>
+		<img src="apple.png" width=500 height=450 alt="apple" onmouseover="over(this)" onmouseout="out(this)">
+	</body>
+</html>

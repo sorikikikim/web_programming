@@ -1,6 +1,7 @@
 function over(obj) {
-	obj.src="banna.png";
+	obj.src="samsung.png";
 }
+
 function out(obj) {
 	obj.src="apple.png";
 }

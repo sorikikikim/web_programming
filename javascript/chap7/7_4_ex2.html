@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>방문 시간에 따라 변하는 배경 색</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h3>페이지 방문 초시간이 짝수이면 violet, 홀수이면 lightskyblue 배경</h3>
+		<hr>
+		<script>
+			var now = new Date();
+			var h, m, s;
+			h = now.getHours();
+			m = now.getMinutes();
+			s = now.getSeconds();
+			document.write("현재 시간 : ");
+			document.write(h + "시, " + m + "분, " + s + "초");
+			if (s % 2 == 0)
+				document.body.style.backgroundColor = "violet";
+			else
+				document.body.style.backgroundColor = "lightskyblue";
+		</script>
+	</body>
+</html>

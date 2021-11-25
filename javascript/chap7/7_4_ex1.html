@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Date 객체로 현재 시간 알아내기</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h3>Date 객체로 현재 시간 알아내기</h3>
+		<hr>
+		<script>
+			var now = new Date();
+			document.write("현재 시간 : " + now.toUTCString());
+			document.write("<hr>");
+			document.write(now.getFullYear() + "년도" + "<br>");
+			document.write(now.getMonth() + "월" + "<br>");
+			document.write(now.getDate() + "일" + "<br>");
+			document.write(now.getHours() + "시" + "<br>");
+			document.write(now.getMinutes() + "분" + "<br>");
+			document.write(now.getSeconds() + "초" + "<br>");
+			document.write(now.getMilliseconds() + "밀리초" + "<br>");
+			document.write("<hr>");
+			document.write("next.toLocaleString() : " + now.toLocaleString());
+		</script>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Array 객체의 메소드 활용</title>
+		<meta charset="utf-8">
+		<script>
+			function print(msg, arr) {
+				document.write(msg + arr.toString() + "<br>");
+			}
+		</script>
+	</head>
+	<body>
+		<h3>Array 객체의 메소드 활용</h3>
+		<hr>
+		<script>
+			var a = new Array("황", "김", "이");
+			var b = new Array("박");
+			var c;
+
+			print("배열 a = ", a);
+			print("배열 b = ", b);
+			document.write("<hr>");
+
+			c = a.concat(b); //c는 a와 b를 연결한 새 배열
+			document.write("c = a.concat(b) 후 ");
+			print("c = ", c);
+			document.write("c = a.concat(b) 후 ");
+			print("a = ", a);
+			document.write("<br>");
+			
+			c = a.join("##"); //c는 배열 a를 연결한 문자열
+			document.write("c = a.join() 후 ");
+			print("c = ", c);
+			document.write("c = a.join() 후 ");
+			print("a = ", a);
+			document.write("<br>");
+
+			c = a.reverse(); // a.reverse()로 a 자체 변경
+			document.write("c = a.reverse() 후 ");
+			print("c = ", c);
+			document.write("c = a.reverse() 후 ");
+			print("a = ", a);
+			document.write("<br>");
+
+			c = a.slice(1, 2); //c는 새 배열
+			document.write("c = a.slice(1, 2) 후 ");
+			print("c = ", c);
+			document.write("c = a.slice(1, 2) 후 ");
+			print("a = ", a);
+			document.write("<br>");
+
+			c = a.sort(); //a.sort()는 a 자체 변경
+			document.write("c = a.sort() 후 ");
+			print("c = ", c);
+			document.write("c = a.sort() 후 ");
+			print("a = ", a);
+			document.write("<br>");
+
+			c = a.toString(); //toString()은 원소 사이에 ","를 넣어 연결된 문자열 생성
+			document.write("a.toString() : " + c);
+			
+		</script>
+	</body>
+</html>

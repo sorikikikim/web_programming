@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>리터럴 표기법으로 사용자 객체 만들기</title>
+		<meta charset="utf-8">
+		<script>
+			var account = {
+				owner : "황기태",
+				code : "1111",
+				balance : 35000,
+
+				inquiry : function() {
+					return this.balance;
+				},
+				deposit : function(money) {
+					this.balance += money;
+				},
+				withdraw : function(money) {
+					this.balance -= money;
+					return money;
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<h3>리터럴 표기법으로 사용자 객체 만들기</h3>
+		<hr>
+		<script>
+			var m = 0;
+			document.write("account : " + account.owner + ", " + account.code + ", " + account.balance + "<br>");
+			m = 10000;
+			account.deposit(m);
+			document.write(m + "원 저금 후 잔액은 " + account.balance);
+			document.write("<br>");
+			m = 5000;
+			account.withdraw(m);
+			document.write(m + "원 인출 후 잔액은 " + account.balance);
+		</script>
+	</body>
+</html>

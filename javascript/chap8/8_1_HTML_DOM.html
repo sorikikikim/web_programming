@@ -1,0 +1,62 @@
+<!--
+	1. HTML DOM 개요
+		1) 코어 객체
+		브라우저 종류, HTML 페이지 구조에 관계 없이 자바스크립트 프로그램에서 항상 활용
+		String, Math, Date, Array, Function 등..
+		
+		2) HTML DOM 객체
+		브라우저는 HTML 페이지를 로드하는 과정에서 각 HTML 태그를 하나의 객체로 만듦
+		<p>...</p> -> p객체, <div>...</div> -> div객체
+		HTML 문서의 각 요소를 객체화 한 것이라는 뜻으로 HTML DOM(Document Object Model) 객체
+
+		3) BOM 객체
+		브라우저에 관한 정보를 제공하거나 브라우저의 모양을 제어하도록 제공되는 객체 BOM(Browser Object Model)
+		BOM 객체에는 브라우저 윈도우를 나타내는 window 객체, 웹 페이지의 히스토리 정보를 나타내는 history 객체, screen 객체 등..
+
+	2. DOM의 목적
+	DOM 객체를 통해 HTML 태그가 출력된 모양과 콘텐츠를 제어하기 위함
+		1) 각 HTML 태그에는 모양을 결정하는 CSS3 스타일 시트가 동반되므로,
+		 DOM 객체를 통해 스타일의 프로퍼티 값을 바꾸면 HTML 태그가 출력된 색이나 모양을 동적으로 제어 가능함
+		2) DOM 객체를 통해 HTML 태그의 콘텐츠, 즉 텍스트나 이미지도 변경 가능함
+	
+	3. DOM 트리
+	예)
+						window
+						  |
+	navigator, document, history, location, screen 
+				  |
+				 html
+				  |
+		head				body
+		 |				 	 |
+	   title		p			      form
+	   				|				   |
+				   span			input  hr input
+
+	4. DOM 트리 특징
+		1) DOM 트리의 루트는 document 객체 //document 객체는 DOM 객체가 아님
+		2) DOM 객체의 종류는 HTML 태그 종류만큼 있음
+		3) HTML 태그 당 DOM 객체가 하나씩 생성됨 //두 개의 input 태그가 있으면 태그마다 input 객체가 생성
+		4) DOM 트리는 HTML 태그의 포함관계에 따라 부모 자식 관계로 구성됨
+
+	5. HTML 태그의 출력과 DOM 객체
+	브라우저 : HTML 페이지를 읽으면서 HTML 태그를 화면에 바로 출력 (x)
+	=> HTML 태그로부터 DOM 객체 생성 -> DOM 트리 구성 -> DOM 객체 화면에 출력 (o)
+	HTML 페이지는 로드된 후 사라지며, 브라우저에는 DOM 객체와 DOM 트리만 존재
+	=> 자바스크립트 코드로 DOM 객체를 제어하면 그에 따라 즉각 브라우저 화면에서 HTML 태그의 모양이나 콘텐츠가 바뀜
+
+	6. DOM 객체의 구성요소
+	HTML 태그의 속성이 그대로 반영되어 만들어짐
+		1) HTML 태그의 요소
+		엘리먼트 이름, 속성, css3 스타일, 이벤트 리스너, 콘텐츠
+		2) DOM 객체의 구성요소
+		프로퍼티, 메소드, 컬렉션, 이벤트 리스너, css3 스타일
+	
+	7. DOM 객체들 사이의 관계
+	parentElement 프로퍼티 - 부모객체
+	children 프로퍼티 - 직계 자식들의 컬렉션
+	firstElementChild 프로퍼티 - 첫 번째 직계 자식
+	lastElementChild 프로퍼티 - 마지막 직계 자식
+	previousElementSibling 프로퍼티 - 왼쪽 sibling 객체
+	nextElementSibling 프로퍼티 - 오른쪽 sibling 객체
+-->

@@ -1,0 +1,37 @@
+<!--
+	1. document : DOM 트리의 최상위 객체
+	브라우저는 HTML 문서를 로드하기 전에 document 객체를 먼저 만듦 -> document 객체를 뿌리로 하여 DOM 트리를 만듦
+	HTML 문서 전체를 대변하는 객체, 모든 DOM 객체를 접근하는 경로의 시작점
+	HTML 문서의 전반적인 속성을 나타내며 전반적인 제어 지원. 
+	
+	접근 방식 (document 객체는 window의 자식)
+	window.document 
+	document 
+	
+	+)document 객체는 DOM 객체가 아님
+
+	2. 이벤트 리스너
+	document 객체의 주요 프로퍼티, 컬렉션, 메소드 (p.365)
+
+	3. 태그 이름으로 DOM 객체 찾기, getElementByTagName()
+	var divTags = document.getElementsByTagName("div");
+	var n = divTags.length; //<div> 태그의 개수
+
+	4. class 속성으로 DOM 객체 찾기
+	var plainClasses = document.getElementsByClassName("plain");
+	var n = plainClasses.length; //class="plain" 속성을 가진 태그 개수
+
+	5. document.write(), document.writeln() 
+	브라우저는 HTML 문서 로드 전, 빈 상태의 document 객체 생성 -> HTML 문서 해석하면서 document 객체에 담음 -> DOM 객체 -> DOM 트리에 연결 -> </html> 태그를 만나면 document 객체를 완성하고 닫음
+	document.write()는 현재 document 객체에 담긴 내용의 끝에 HTML 텍스트를 추가하는 코드
+	추가되는 HTML 텍스트 -> DOM 객체 -> DOM 트리에 추가
+
+	6. document.open(), document.close()
+	document.open();
+	document.write(...);
+	document.close();
+
+	document.close() 가 실행된 후에는 HTML 텍스트를 덧붙일 수 없음.
+	새 윈도우를 열고 그곳에 HTML를 출력해야 함.
+
+-->

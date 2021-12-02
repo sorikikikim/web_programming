@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>원호 그리기</title>
+		<meta charset="utf-8">
+		
+	</head>
+	<body>
+		<h3>원호 그리기</h3>
+		<hr>
+		<script>
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+
+			context.beginPath();
+			context.strokeStyle = "magenta";
+			context.arc(100, 70, 30, 0, 1.5 * Math.PI, false);
+			//(100, 70)에 반지름 30짜리, 원호는 0~270도, 시계방향
+			context.stroke();
+
+			context.beginPath();
+			context.strokeStyle = "blue";
+			context.arc(100, 70, 50, Math.PI/2, true); 
+			context.stroke();
+		</script>
+	</body>
+</html>

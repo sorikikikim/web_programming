@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>setInterval()로 텍스트 회전</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h3>텍스트가 자동회전하며, 마우스로 클릭하면 종료됩니다.</h3>
+		<hr>
+		<div>
+			<span id="text" style="background-color: yellow;">자동 회전하는 텍스트입니다.</span>
+		</div>
+		<script>
+			var text = document.getElementById("text");
+			var timerID = setInterval("doRotate()", 200);
+
+			text.onclick = function(e) {
+				clearInterval(timerID);
+			} 
+
+			function doRotate() {
+				var str = text.innerHTML;
+				var firstChar = str.substr(0, 1);
+				var remains = str.substr(1, str.length - 1);
+				str = remains + firstChar;
+				text.innerHTML = str;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!--
+	1. 이벤트 흐름
+	발생한 이벤트 -> 타겟 객체에 전달
+	하지만 이벤트가 단번에 타켓 객체로 전달되고 사라지는 것은 아니다.
+	이벤트 흐름 과정 : 발생한 이벤트 -> window 객체 -> DOM 트리 -> 중간 DOM 객체들 -> 타겟 객체 
+												사라짐	<-	window 객체	 <-
+		1) 캡쳐 단계
+		window에서 (-> 중간에 있는 모든 DOM 객체) -> 타겟 객체까지 이벤트 객체가 전파되는 과정
+		캡쳐 단계에서 실행되도록 작성된 리스너 : 캡쳐 리스너
+		2) 버블 단계
+		다시 타겟 객체에서 -> 거꾸로 window까지 이벤트 객체가 전파되는 과정
+		버블 단계에서 실행되도록 작성된 리스너 : 버블 리스너
+
+	2. 이벤트 흐름 사례
+	<input type = "button">으로 만들어진 버튼을 클릭하였을 때. click 이벤트의 흐름
+	
+		1) 이벤트 캡쳐 단계 
+		click 이벤트 : window -> DOM 트리 -> window, document, html, body, form 객체 -> 이벤트 타겟(input 객체)
+
+		2) 이벤트 버블 단계 //버블 리스너 선호
+		click 이벤트 : 타겟 객체 -> DOM 트리 -> window 
+		전파도중 DOM 객체에 onclick 버블 리스너가 있으면 실행된다. window 객체에 도달한 후 click 이벤트는 사라진다.
+
+	3. 캡쳐 리스너와 버블 리스너
+	하나의 DOM 객체는 캡쳐 리스너와 버블 리스너를 모두 가질 수 있다. 그러므로 이벤트 리스너를 등록할 때 캡쳐 리스너인지 버블 리스너인지 분명히 지정하여야 한다.
+	addEventListener()의 경우 3번째 매개 변수가 true이면 캡쳐 리스너로, false이면 버블 리스너로 등록한다. 
+	var b = document.getElementById("button");
+	b.addEventListener("click", capFunc, true);
+	b.addEventListener("click", bubbleFunc, false);
+
+	4. 이벤트 흐름을 중단시킬 수 있는가? YES
+	이벤트가 흘러가는 도중 임의의 리스너에서 stopPropagation()메소드를 호출하면 이벤트는 더이상 전파되지 않고 사라진다.
+	event.stopPropagation();
+-->

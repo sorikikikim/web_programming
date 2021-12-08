@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>김소리 - 3</title>
+		<meta charset="utf-8">
+		<script>
+			function changeImage() {
+				var found = null;
+				var fruits = document.getElementById("sel");
+				var img = docment.getElementById("fruitImage");
+			
+				for (var i = 0; i < sel.length; i++) {
+					if (sel[i].checker == true) {
+						found = sel[i];
+					}
+				}
+				if (found != null)
+					img.src = found.value;
+				else
+					alert("선택된 것이 없음");
+			}
+		</script>
+	</head>
+	<body onload="changeImage()">
+	<form>
+		<input type = "radio" id = 'sel' name="fruits" value="apple.jpeg">사과<br>
+		<input type = "radio" id = 'sel' name="fruits" value="banana.jpeg">바나나<br>
+		<input type = "radio" id = 'sel' name="fruits" value="mango.jpeg">망고<br><br>
+		<input type=button value="Show Image" onclick="changeImage()"><br>
+		<img id="fruitImage" src="">
+	</form>
+	
+</html>

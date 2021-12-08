@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>김소리 - 4</title>
+		<meta charset="utf-8">
+		<script>
+			function putScore() {
+				var btn = document.getElementById(btn);
+				var inputString = prompt('점수를 입력하세요', '');
+				if (inutString >= 95)
+					alert("A+");
+				else if (inutString >= 90)
+					alert("A");
+				else if (inutString >= 85)
+					alert("B+");
+				else if (inutString >= 80)
+					alert("B");
+				else
+					alert("C");
+			}
+		</script>
+	</head>
+	<body>
+		<input type=button id="btn" value="점수 입력" onclick="putScore()">
+	</body>
+</html>
